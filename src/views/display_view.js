@@ -22,8 +22,11 @@ DisplayView.prototype.display = function (familyObject) {
   displayDescription.textContent = `${familyObject.description}`;
   this.container.appendChild(displayDescription);
 
+  const displayExamplesHeader = document.createElement('h3');
+  displayExamplesHeader.textContent = `Instruments include...`;
+  this.container.appendChild(displayExamplesHeader);
+
   const displayExamples = document.createElement('ul');
-  displayExamples.textContent = `Examples of ${familyObject.name} instruments include...`
   displayExamples.id = 'instrument-list';
   this.container.appendChild(displayExamples);
   const list = document.querySelector('#instrument-list');
@@ -33,6 +36,11 @@ DisplayView.prototype.display = function (familyObject) {
     list.appendChild(entry);
   })
 
+  if (familyObject.video){
+    const displayVideo = document.createElement('div');
+    displayVideo.innerHTML = familyObject.video;
+    this.container.appendChild(displayVideo);
+  }
 };
 
 

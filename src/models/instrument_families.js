@@ -5,7 +5,8 @@ const InstrumentFamilies = function() {
     {
       name: 'Brass',
       description: 'A brass instrument is a musical instrument that produces sound by sympathetic vibration of air in a tubular resonator in sympathy with the vibration of the player\'s lips',
-      instruments: ['trumpet', 'trombone', 'horn', 'tuba', 'bugle']
+      instruments: ['trumpet', 'trombone', 'horn', 'tuba', 'bugle'],
+      video: '<iframe width="1" height="1" src="https://www.youtube-nocookie.com/embed/fKFbnhcNnjE?autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;start=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
     },
     {
       name: 'Strings',
