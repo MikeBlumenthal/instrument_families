@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const familyChoices = new SelectView(selectElement);
   familyChoices.bindEvents();
 
+  const displayDiv = document.querySelector('#display-container');
+  const familyInfoDisplay = new DisplayView(displayDiv);
+  familyInfoDisplay.bindEvents();
+
   const instrumentData = new InstrumentFamilies();
   instrumentData.bindEvents();
 
