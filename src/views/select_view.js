@@ -11,8 +11,13 @@ SelectView.prototype.bindEvents = function () {
   })
 };
 
-SelectView.prototype.populate = function () {
-
+SelectView.prototype.populate = function (dataArray) {
+  dataArray.forEach( ( family, index ) => {
+    const option = document.createElement('option');
+    option.textContent = family.name;
+    option.value = index;
+    this.element.appendChild(option);
+    })
 };
 
 module.exports = SelectView;
