@@ -8,7 +8,11 @@ SelectView.prototype.bindEvents = function () {
   PubSub.subscribe('InstrumentFamilies:all-info-ready', (event) => {
     const allFamilies = event.detail;
     this.populate(allFamilies);
-  })
+  });
+  this.element.addEventListener('change', (event) => {
+    const chosenIndex = event.target.value;
+    PubSub.publish('SelectView:choice', chosenIndex);
+  });
 };
 
 SelectView.prototype.populate = function (dataArray) {
